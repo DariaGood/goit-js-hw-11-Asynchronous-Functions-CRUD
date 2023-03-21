@@ -2,7 +2,7 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://DariaGood.github.io/goit-js-hw-11-Asynchronous-Functions-CRUD",
+  "homepage": "https://dariagood.github.io/goit-js-hw-11-Asynchronous-Functions-CRUD",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /goit-js-hw-11-Asynchronous-Functions-CRUD/"
