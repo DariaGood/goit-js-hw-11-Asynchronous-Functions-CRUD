@@ -1,22 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-<link rel="stylesheet" href="css/styles.css">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 11</title>
+    <title>Page title</title>
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <form class="search-form" id="search-form">
-      <input
-        type="text"
-        name="searchQuery"
-        autocomplete="off"
-        placeholder="Search images..."
-      />
-      <button type="submit">Search</button>
-    </form>
-    <script src="index.js" type="module"></script>
+    <div class="container">
+      <form class="search-form" id="search-form">
+        <input
+          class="input"
+          type="text"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+        <button class="search-form__submit" type="submit">
+          <img
+            src="./images/icon.png"
+            width="25"
+            height="25"
+            alt="icon-search"
+          />
+        </button>
+      </form>
+
+      <div class="gallery">
+        <!-- Карточки изображений -->
+      </div>
+
+      <button type="button" class="load-more">Load more</button>
+    </div>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
