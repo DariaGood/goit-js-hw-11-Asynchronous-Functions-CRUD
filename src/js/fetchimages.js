@@ -14,3 +14,4 @@ export async function fetchImages(value, page = 1, perPage = 40) {
     return Promise.reject(`${error}`);
   }
 }
+
