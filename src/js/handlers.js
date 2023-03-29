@@ -1,9 +1,8 @@
 import Notiflix, { Loading } from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
-// Додатковий імпорт стилів
+
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import { refs } from './refs';
-import { renderGalleryMarkup } from './createmarkup';
 import { fetchImages } from './fetchimages';
 
 const lightbox = new SimpleLightbox('.gallery a');
@@ -86,4 +85,52 @@ function cleanGallery() {
   refs.gallery.innerHTML = '';
   page = 1;
   hideBtnLoadMore();
+}
+
+function createGalleryMarkup(images) {
+  return images
+    .map(
+      ({
+        largeImageURL,
+        webformatURL,
+        tags,
+        likes,
+        views,
+        comments,
+        downloads,
+      }) => `<div class="photo-card">
+      <a href="${largeImageURL}">
+              <img
+              class="gallery__image"
+              src="${webformatURL}"
+              alt="${tags}"
+              loading="lazy"
+              width = "350px"
+              height = "250px"
+            />
+  <div class="info">
+    <p class="info-item">
+      <b>Likes</b>
+      <span>${likes}</span>
+    </p>
+    <p class="info-item">
+      <b>Views</b>
+      <span>${views}</span>
+    </p>
+    <p class="info-item">
+      <b>Comments</b>
+      <span>${comments}</span>
+    </p>
+    <p class="info-item">
+      <b>Downloads</b>
+      <span>${downloads}</span>
+    </p>
+  </div>
+</div>`
+    )
+    .join('');
+}
+
+function renderGalleryMarkup(images) {
+  refs.gallery.insertAdjacentHTML('beforeend', createGalleryMarkup(images));
 }

@@ -1,12 +1,14 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
 a {
   display: block;
   text-decoration: none;
   color: inherit;
-  transition: box-shadow 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms;
   &:hover,
   &:focus {
-    box-shadow: -1px 5px 31px 10px rgba(143, 137, 143, 0.98);
+    transform: scale(1.10);
+    box-shadow: 6px  6px 12px rgba(0, 0, 0, .25);
   }
 }
 img {
@@ -16,43 +18,34 @@ img {
   object-fit: cover;
 }
 
-.img {
-  width: 350px;
-  height: 250px;
-}
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  
 }
 
 .search-form {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  background-color: rgb(6, 72, 179);
   display: flex;
   justify-content: center;
   padding-top: 20px;
   padding-bottom: 20px;
-
-  background-color: rgb(37, 71, 204);
 }
 
 .input {
+  width: 500px;
   display: flex;
   padding: 10px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 
   border-color: transparent;
+
 }
 
+
+
 .search-form__submit {
-  cursor: pointer;
-  color: #ff6b0a;
-  border-color: transparent;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
@@ -68,14 +61,16 @@ img {
 
 .photo-card {
   max-width: 300px;
+  box-shadow: 6px  6px 12px rgba(0, 0, 0, .25);
 }
+
 
 .info {
   display: flex;
   justify-content: space-around;
   border-radius: 4px;
-
-  box-shadow: -1px 5px 31px 10px rgba(143, 137, 143, 0.98);
+background-color: #fff;
+ 
 }
 
 .info-item {
@@ -94,9 +89,9 @@ img {
   margin-left: auto;
   margin-right: auto;
   padding: 10px 20px;
-  cursor: pointer;
   border-radius: 4px;
   border-color: transparent;
   color: #fff;
   background-color: rgb(37, 71, 204);
 }
+
